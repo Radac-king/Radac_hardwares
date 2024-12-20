@@ -1,0 +1,36 @@
+.about_container{
+    padding: 4em 0;
+
+    .about_content{
+        @include grid(2);
+
+        .about_infor{
+            p{
+                font-size: 1.1em;
+                padding: 0.6em 0;
+            }
+        }
+
+        .about_image{
+            @include flex_center;
+
+            img{
+                width: 45%;
+                height: 45vh;
+                border-radius: 20px 0 20px 0;
+            }
+        }
+    }
+}
+
+@media screen and (width <=726px) {
+    .about_container{
+        padding: 4.5em 4%;
+
+        .about_content{
+            .about_image{
+                display: none;
+            }
+        }
+    }
+}

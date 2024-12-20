@@ -1,0 +1,36 @@
+$primary-color:#000000;
+$secondary-color:#FFFAFF;
+$accent-color:#D8315B;
+$success-color:#008000;
+$danger-color:#ff0000;
+$button-color:#a45201;
+$background-color:#242424;
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $primary-color;
+    color:$secondary-color;
+}
+
+.main_container{
+    padding: 0 3%;
+    margin: 0 0 3em;
+}
+
+.title{
+    color: $accent-color;
+}
+
+.vue-devtools__panel{ 
+    display: none !important; 
+}  

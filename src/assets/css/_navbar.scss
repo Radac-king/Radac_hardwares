@@ -1,0 +1,114 @@
+.navbar_container{
+    @include flex_center;
+    justify-content: space-between;
+    height: 10vh;
+    backdrop-filter: blur(6px);
+    box-shadow: 2px 2px 3px $secondary-color;
+    padding: 0 1em;
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 100;
+
+    .logo{
+        @include flex_center;
+        gap:0.5em;  
+        
+        a{
+            text-decoration: none;
+            color:$secondary-color;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        img{
+            border-radius: 50%
+        }
+    }
+    .nav_links{
+        ul{
+            @include flex_center;
+            list-style: none;
+
+            li{
+                padding: 0 0.6em;
+                font-size: 1.2em;
+                a{
+                    text-decoration: none;
+                    color:$secondary-color;
+                    &:hover{
+                        color:$accent-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .burger{
+        display: none;
+        cursor: pointer;
+         
+        span{
+            height: 3px;
+            width: 35px;
+            display: block;
+            background-color:$secondary-color;
+            margin:0 0  8px;
+            transition: transform 0.5s, opacity 0.5s;
+        }
+    }
+    .burger.active ~ .nav_links {
+        display: block;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateY(6px); 
+    }
+    
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+
+@media screen and (width <=726px) {
+    .navbar_container{
+        .nav_links.active {
+            display: block;
+        }
+
+        .nav_links{
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 45%;
+            height: 65vh;
+            background: $secondary-color;
+            backdrop-filter: blur(4px);
+            z-index: 99;
+
+            ul{
+                flex-direction: column;
+                align-items: center;
+                padding: 1em 0;
+    
+                li {
+                    padding: 0.5em 0;
+                    margin: 1.1em 0;
+
+                    a {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .burger{
+            display: block;
+        }
+    }
+}

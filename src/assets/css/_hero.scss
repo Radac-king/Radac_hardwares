@@ -1,0 +1,48 @@
+.hero_container{
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)), url(../images/reagan.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 88vh;
+
+    .hero_content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        
+        p{
+            font-size: 2.5em;
+            font-weight: 450;
+        }
+
+        h1{
+            overflow: hidden;
+            white-space: nowrap; 
+            text-shadow: 2px 2px 2px #36680a;
+            font-size: 5em;
+        }
+    }
+}
+
+
+@media screen and (width <=726px) {
+    .hero_container{
+        background-position: top;
+        height: 55vh;
+        padding: 4.5em 0;
+        
+        .hero_content{
+            top:35%;
+            left:50%;
+
+            p{
+                font-size: 1.8em;
+            }
+
+            h1{
+                font-size: 2.5em;
+            }
+        }
+    }
+}
